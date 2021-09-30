@@ -4,7 +4,7 @@
 <p>© <span itemprop="copyrightYear">{{ current }}</span> {{ config.title }}.
     由 <a href="https://hexo.io/" target="_blank" class="external" rel="nofollow">Hexo</a> 强力驱动.
     Theme By <a href="https://github.com/DIYgod/hexo-theme-sagiri" target="_blank" class="external" rel="nofollow">Sagiri</a> v{{ theme.version }}.
-    萌ICP备<a href="https://icp.gov.moe/?keyword=20213600" target="_blank"> 20213600号</a>
+    萌ICP备<a href="https://icp.gov.moe/?keyword=20213600" target="_blank"> 20213600号</a>.
     <a href="{{ url_for(theme.footer.sitemap) }}" target="_blank">站点地图</a>.   
     <a href="/admin" target="_blank">后台</a>.
 </p>
