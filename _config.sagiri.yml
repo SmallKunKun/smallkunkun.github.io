@@ -358,7 +358,7 @@ valine:
   
 # Waline.
 waline:
-  
+  enable: true
   serverURL: 'https://waline-comment.vercel.app/'
   placeholder: 说点什么
   bg: https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/comment_bg.png
