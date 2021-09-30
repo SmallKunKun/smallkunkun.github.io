@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "cd themes/sagiri/ && npm i && cd ../../ && npm i && npm i hexo-renderer-swig && npm run build"
+  command = "cd themes/sagiri/ && npm i && npm install --save nprogress && cd ../../ && npm i && npm i hexo-renderer-swig && npm run build"
 
 [build.environment]
   NODE_VERSION = "14"
