@@ -3,7 +3,7 @@ title: 关于
 layout: about
 comments: true
 ---
-我很逊，其他的别问 (ノ_＜)
+我很逊，其他的别问(ノ_＜)
 
 不会使用电脑……
 
