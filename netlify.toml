@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "npm i && npm i hexo-renderer-swig && npm run build"
+  command = "npm i && npm i hexo-renderer-swig && cd themes/sagiri/ && npm i && npm run build"
 
 [build.environment]
   NODE_VERSION = "14"
