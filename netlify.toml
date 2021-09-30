@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "npm i && cd themes/sagiri/ && npm i && cd ../../ && npm run build"
+  command = "npm i && cd /themes/sagiri/ && npm i && cd ../../ && npm run build"
 
 [build.environment]
   NODE_VERSION = "14"
