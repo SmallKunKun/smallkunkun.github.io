@@ -1,15 +1,11 @@
----
-banner_img: ""
-index_img: ""
-sticky: 1
 title: 如何建立一个Minecraft服务器
 date: 2021-09-11 21:59:10
-updated: 2021-09-11 21:59:10
+author: SmallKunKun
 tags:
   - Minecraft
-categories:
+  - Server
   - 教程
-excerpt: []
+categories: [教程]
 comments: true
 ---
 ![Head-Photo](https://smallkunkun.gitee.io/photo/101.png)
