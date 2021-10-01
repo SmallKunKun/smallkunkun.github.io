@@ -70,12 +70,12 @@ menu:
   项目: javascript:; || fas fa-magic
   归档: /archives/ || fas fa-archive
   留言: /message/ || fas fa-comment-dots
+  友链: /friends/ || fas fa-mars-stroke
   关于: /about/ || fas fa-heartbeat
 
 submenu:
   项目:
     Search: https://kunkun.js.org/search
-    Minecraft Server: http://mc.kunkun.website
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -118,7 +118,7 @@ links_title: Links
 links_layout: block
 #links_layout: inline
 links:
-  #DIYgos: https://kunkun.js.org || https://diygod.me/images/DIYgod.jpg || Hi, DIYgod
+  XiaoWangWeb: https://xiaowangweb.github.io || https://avatars.githubusercontent.com/u/51265049?v=4 || 做何事要认真……
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
