@@ -22,9 +22,8 @@ collections:      # https://www.netlifycms.org/docs/configuration-options/#colle
     create: true # 允许用户在这个集合中创建新的文件。
     fields: # 每份文件的字段，通常是前面的内容。
       - {label: "标题", name: "title", widget: "string"}
-      - {label: "文章排序", name: "sticky", widget: "number", required: false}
       - {label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm:ss", required: false}
-      - {label: "更新日期", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm:ss", required: false}
+      - {label: "作者", name: "author" ,widget: "list", required: false}
       - {label: "标签", name: "tags", widget: "list", required: false}
       - {label: "分类", name: "categories", widget: "list", required: false}
       - {label: "内容", name: "body", widget: "markdown", required: false}
