@@ -15,9 +15,7 @@ comments: true
 ![Head-Photo](https://smallkunkun.gitee.io/photo/101.png)
 
 一个人玩我的世界当然很无聊哈，所以我们就会建立一个我的世界服务器邀请我们的朋友一起玩 \(≧▽≦)/
-
 <!--more-->
-
 ## 如何建立一个Minecraft服务器
 
 ### 服务器的选择
