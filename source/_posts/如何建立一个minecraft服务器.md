@@ -1,6 +1,6 @@
 ---
-banner_img: https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/101.png
-index_img: https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/101.png
+banner_img: ""
+index_img: ""
 sticky: 1
 title: 如何建立一个Minecraft服务器
 date: 2021-09-11 21:59:10
@@ -9,10 +9,15 @@ tags:
   - Minecraft
 categories:
   - 教程
-excerpt:
-  - 一个人玩我的世界当然很无聊哈，所以我们就会建立一个我的世界服务器邀请我们的朋友一起玩 \(≧▽≦)/
+excerpt: []
 comments: true
 ---
+![Head-Photo](https://smallkunkun.gitee.io/photo/101.png)
+
+一个人玩我的世界当然很无聊哈，所以我们就会建立一个我的世界服务器邀请我们的朋友一起玩 \(≧▽≦)/
+
+<!--more-->
+
 ## 如何建立一个Minecraft服务器
 
 ### 服务器的选择
