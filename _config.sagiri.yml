@@ -1038,11 +1038,11 @@ images: images
 card:
   avatar: https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/HeadPhoto.png
   name: <span style="opacity:.2;"></span>SmallKunKun
-  description: Hello World!
+  description: H...ello Wor...ld?
   items:
-    最喜欢的作品: 天使降临到我身边、罗小黑战记、New Game、工作细胞、鬼灭之刃、打了300年的史莱姆，不知不觉就练到了满级、魔女之旅、青春猪头少年不会梦到兔女郎学姐……
+    最喜欢的作品: 天使降临到我身边、罗小黑战记、New Game、鬼灭之刃、轻音少女、点兔、工作细胞、魔女之旅、青春猪头少年不会梦到兔女郎学姐……
     最喜欢的游戏: Mineraft、Genshin Impact
-    在用: iPhone 6、小爱触屏音箱、一台i3-4100的老电脑、米家翻译机
+    在用: iPhone、小爱触屏音箱、电脑、米家翻译机
 
 footer:
   # Specify the date when the site was setup.
