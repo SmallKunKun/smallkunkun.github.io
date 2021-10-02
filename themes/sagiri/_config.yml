@@ -74,8 +74,6 @@ menu:
 
 submenu:
   项目:
-    Search: https://kunkun.js.org/search
-    Minecraft Server: http://mc.kunkun.website
 
 # Enable/Disable menu icons.
 menu_icons:
