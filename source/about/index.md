@@ -1,7 +1,7 @@
 ---
 title: 关于
 layout: about
-comments: true
+comments: false
 ---
 我很逊,~~不会使用电脑……~~,其他的别问 (ノ_＜)
 
