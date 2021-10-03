@@ -6,8 +6,9 @@ tags:
   - Minecraft
   - Server
   - 教程
-categories: [教程]
-comments: true
+categories:
+  - 教程
+comments: false
 ---
 ![Head-Photo](https://smallkunkun.gitee.io/photo/101.png)
 
