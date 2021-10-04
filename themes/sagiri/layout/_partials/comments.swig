@@ -48,11 +48,6 @@
       <div id="lv-container" data-id="city" data-uid="{{ theme.livere_uid }}"></div>
     </div>
 
-  {% elseif theme.changyan.appid and theme.changyan.appkey %}
-    <div class="comments" id="comments">
-      <div id="SOHUCS"></div>
-    </div>
-
   {% elseif theme.gitment.enable %}
     <div class="comments" id="comments">
       {% if theme.gitment.lazy %}
