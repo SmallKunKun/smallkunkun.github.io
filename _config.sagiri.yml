@@ -350,7 +350,7 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
 valine:
-  enable: true
+  enable: false
   appid: pVWlIRblauDR3hOPnHGhpgfj-MdYXbMMI # your leancloud application appid
   appkey: ESE3hEg0f1lW5mmAhXmmzgcG # your leancloud application appkey
   notify: true # mail notifier , https://github.com/xCss/Valine/wiki
@@ -629,7 +629,7 @@ waline:
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 gitment:
-  enable: false
+  enable: true
   mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   count: true # Show comments count in post meta area
   lazy: false # Comments lazy loading with a button
