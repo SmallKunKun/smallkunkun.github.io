@@ -7,12 +7,12 @@
         av: AV,
         el: '#comments' ,
         master: '1ac43a1bbdab735cc5dda046c6e30511',
+        master: 'fdf4b9cbc324ac894bceba3ff2b1cad8',
         tagMeta: ["博主","小伙伴","访客"],
-        verify: {{ theme.valine.verify }},
-        notify: {{ theme.valine.notify }},
         app_id: '{{ theme.valine.appid }}',
         app_key: '{{ theme.valine.appkey }}',
-        placeholder: '{{ theme.valine.placeholder }}'
+        placeholder: "填写QQ邮箱可以获取QQ头像哦(●'◡'●)"
+        enableQQ: true
     });
   </script>
 {% endif %}
