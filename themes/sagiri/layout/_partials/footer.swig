@@ -16,7 +16,7 @@
 <meting-js id="2341398626" lrc-type="0" server="tencent" order="list" type="playlist" fixed="true" list-olded="true"></meting-js>
 <style>
 #veditor {
-	background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);
+	background-image: url(https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/comment_bg.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
