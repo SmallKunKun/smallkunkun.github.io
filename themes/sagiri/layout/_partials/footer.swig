@@ -14,3 +14,17 @@
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 <meting-js id="2341398626" lrc-type="0" server="tencent" order="list" type="playlist" fixed="true" list-olded="true"></meting-js>
+<style>
+#veditor {
+	background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: rgba(255, 255, 255, 0);
+	resize: vertical
+}
+#veditor:focus{
+	background-position-y: 200px;
+	transition: all 0.2s ease-in-out 0s;
+}
+</style>
