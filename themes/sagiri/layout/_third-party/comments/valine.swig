@@ -10,7 +10,7 @@
         tagMeta: ["博主","小伙伴","访客"],
         app_id: '{{ theme.valine.appid }}',
         app_key: '{{ theme.valine.appkey }}',
-        placeholder: '{{ theme.valine.placeholder }}'
+        placeholder: "填写QQ邮箱可以获取QQ头像哦(●'◡'●)",
         enableQQ: true
     });
   </script>
