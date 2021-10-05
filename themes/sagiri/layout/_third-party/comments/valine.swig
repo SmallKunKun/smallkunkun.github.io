@@ -11,7 +11,7 @@
         app_id: '{{ theme.valine.appid }}',
         app_key: '{{ theme.valine.appkey }}',
         placeholder: "填写QQ邮箱可以获取QQ头像哦(●'◡'●)",
-        enableQQ: true
+        enableQQ: true,
     });
   </script>
 {% endif %}
