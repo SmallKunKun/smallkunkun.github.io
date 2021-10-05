@@ -11,7 +11,7 @@
         tagMeta: ["博主","小伙伴","访客"],
         app_id: '{{ theme.valine.appid }}',
         app_key: '{{ theme.valine.appkey }}',
-        placeholder: "Entering QQ mail can get QQ avatar! :D"
+        placeholder: '{{ theme.valine.placeholder }}'
         enableQQ: true
     });
   </script>
