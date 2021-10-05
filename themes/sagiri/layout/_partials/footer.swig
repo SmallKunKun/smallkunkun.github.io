@@ -17,7 +17,6 @@
 <style>
 #veditor {
 	background-image: url(https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/comment_bg.png);
-	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
 	background-color: rgba(255, 255, 255, 0);
