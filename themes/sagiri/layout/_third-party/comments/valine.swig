@@ -11,7 +11,7 @@
         tagMeta: ["博主","小伙伴","访客"],
         app_id: '{{ theme.valine.appid }}',
         app_key: '{{ theme.valine.appkey }}',
-        placeholder: "填写QQ邮箱可以获取QQ头像哦(●'◡'●)"
+        placeholder: "Entering QQ mail can get QQ avatar! :D"
         enableQQ: true
     });
   </script>
