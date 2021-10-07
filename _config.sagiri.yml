@@ -118,7 +118,7 @@ links_title: Links
 links_layout: block
 #links_layout: inline
 links:
-  XiaoWangWeb: https://xiaowangweb.github.io || https://avatars.githubusercontent.com/u/51265049?v=4 || 做何事要认真……
+  XiaoWangWeb: https://xiaowangweb.github.io || https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/d1160924ab18972b7b6d1ff8e1cd7b899e510aa8.jpg.png || 做何事要认真……
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
