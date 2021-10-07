@@ -6,8 +6,8 @@
     new Valine({
         av: AV,
         el: '#comments' ,
-        master: '1ac43a1bbdab735cc5dda046c6e30511',
-        tagMeta: ["博主","小伙伴","访客"],
+        master: 'fdf4b9cbc324ac894bceba3ff2b1cad8',
+        tagMeta: ["Blogger","Friend","Stranger"],
         friends: ["fc39b03300f24e85e0984d741336defa","bbbefd6ecc54a0f132681f50b46ec346"],
         app_id: '{{ theme.valine.appid }}',
         app_key: '{{ theme.valine.appkey }}',
