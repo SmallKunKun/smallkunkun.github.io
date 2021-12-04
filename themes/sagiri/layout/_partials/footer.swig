@@ -75,9 +75,9 @@ img.vimg:hover {
 
           "display": {      
 
-            "position": "left", //看板娘的表现位置
-            "width": 150,  //小萝莉的宽度
-            "height": 300, //小萝莉的高度
+            "position": "left", 
+            "width": 150,  
+            "height": 300, 
             "hOffset": 0,     
 
             "vOffset": -20
@@ -92,7 +92,7 @@ img.vimg:hover {
 
         "react": {
 
-            "opacityDefault": 0.7,
+            "opacityDefault": 1,
 
             "opacityOnHover": 0.2
         }
