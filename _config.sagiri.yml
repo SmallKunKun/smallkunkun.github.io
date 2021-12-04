@@ -124,7 +124,7 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/HeadPhoto.png
+avatar: https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/g.jpeg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -145,7 +145,7 @@ creative_commons: by-nc-sa
 sidebar:
   # Sidebar Position, available value: left | right (only for Pisces | Gemini).
   # position: left
-  position: right
+  position: left
 
   # Sidebar Display, available value (only for Muse | Mist):
   #  - post    expand on posts automatically. Default.
@@ -917,7 +917,7 @@ images: images
 # header_bg: https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/JPPRE2494.png
 
 card:
-  avatar: https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/HeadPhoto.png
+  avatar: https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/g.jpeg
   name: <span style="opacity:.2;"></span>SmallKunKun
   description: H...ello Wor...ld?
   items:
