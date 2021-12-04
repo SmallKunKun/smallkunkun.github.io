@@ -10,9 +10,9 @@
     <a href="/admin" target="_blank">后台</a>.
 </p>
 <p>Made with <i class="fas fa-heart throb" style="color: #d43f57;"></i> by <span class="author" itemprop="copyrightHolder">SmallKunKun</span>.</p>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+<script src="https://blog-static.cnblogs.com/files/zouwangblog/APlayer.min.js"></script>
+<script src="https://unpkg.com/meting@1.2/dist/Meting.min.js"></script>
 <div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="2341398626" data-server="tencent" data-type="playlist" data-order="list" data-fixed="true" data-listfolded="true" data-theme="green"></div>
 
 <style>
