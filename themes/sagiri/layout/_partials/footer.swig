@@ -13,7 +13,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-<meting-js id="2341398626" lrc-type="0" server="tencent" order="list" type="playlist" fixed="true" list-olded="true"></meting-js>
+<div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="2341398626" data-server="tencent" data-type="playlist" data-order="list" data-fixed="true" data-listfolded="true" data-theme="green"></div>
+
 <style>
 #veditor {
 	background-image: url(https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/comment_bg.png);
