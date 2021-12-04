@@ -76,8 +76,8 @@ img.vimg:hover {
           "display": {      
 
             "position": "left", 
-            "width": 150,  
-            "height": 300, 
+            "width": 75,  
+            "height": 150, 
             "hOffset": 0,     
 
             "vOffset": -20
