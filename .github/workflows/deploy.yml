@@ -38,7 +38,6 @@ jobs:
         git config --global user.name 'SmallKunKun'
         git config --global user.email '1764746475@qq.com'
         
-    - name: Deploy Hexo
-      run: |
-        npm run deploy
+    - name: Hexo Deploy
+      uses: Solybum/hexo-deploy@1.1
       
