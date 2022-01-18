@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/post/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>如何建立一个Minecraft服务器</title>
+    <url>/post/4cd3912b/</url>
+    <content><![CDATA[<p><img src="https://smallkunkun.gitee.io/photo/101.png" alt="Head-Photo"></p>
+<p>一个人玩我的世界当然很无聊哈，所以我们就会建立一个我的世界服务器邀请我们的朋友一起玩 (≧▽≦)/</p>
+<span id="more"></span>
+<h2 id="如何建立一个Minecraft服务器"><a href="#如何建立一个Minecraft服务器" class="headerlink" title="如何建立一个Minecraft服务器"></a>如何建立一个Minecraft服务器</h2><h3 id="服务器的选择"><a href="#服务器的选择" class="headerlink" title="服务器的选择"></a>服务器的选择</h3><p>1.<a href="https://developer.aliyun.com/plan/grow-up">阿里云学生服务器</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210710085523.png" alt="Aliyun Student Server"></p>
+<p>2.<a href="https://cloud.tencent.com/act/campus?cps_key=07262ceff2ebf6a221b67638c3953235">腾讯云学生服务器</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210710085223.png" alt="Tencent Student Server"></p>
+<p>我选择的是轻量应用服务器，对比了一下两家的配置，很明显腾讯的更有<del>性价比</del>的选择 ╮(￣▽￣””)╭</p>
+<p><strong>PS:一点要选择CentOS系统!!!</strong></p>
+<h3 id="搭建服务器后台"><a href="#搭建服务器后台" class="headerlink" title="搭建服务器后台"></a>搭建服务器后台</h3><h4 id="安装面板"><a href="#安装面板" class="headerlink" title="安装面板"></a>安装面板</h4><p>我曾经有篇文章是使用宝塔面板来管理服务器，但它显然不是一个专门管理MC服务器的面板</p>
+<p>所以，我的目光转到了<a href="http://mcsm.suwings.top/">Mcserver Manager</a>上</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210710090708.png" alt="Mcserver Manager"></p>
+<p>这个Minecraft服务端管理面板还是很有名的吧，B站教程拿自己的电脑开服，基本都是这个使用面板</p>
+<p>但他们都是使用Windows环境去搭建服务器，CentOS是Linux环境，怎么办好呢 ಠ_ಠ</p>
+<p>查阅一遍Mcserver Manager的使用文档，你可以发现他们已经制作了Linux上的快速安装程序:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -qO- https://gitee.com/Suwingser/MCSManager-installer/raw/master/install.sh | bash</span><br></pre></td></tr></table></figure>
+
+<p>安装成功后，使用 <code>systemctl start mcsm</code> 命令即可启动面板</p>
+<p>如果安装失败，你还可以查阅官方文档选择其他方法<a href="https://github.com/Suwings/MCSManager/wiki/Linux-%E4%B8%8B%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3">安装</a>，就是有些<del>麻烦</del> (O_o)</p>
+<h4 id="放行端口"><a href="#放行端口" class="headerlink" title="放行端口"></a>放行端口</h4><p>我使用的腾讯云的服务器，操作方式和其他服务器供应商可能不一样，具体操作方式以官方为准</p>
+<p>1.进入防火墙</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210710092243.png" alt="Firewall"></p>
+<p>2.首先添加规则，在端口填上23333 最后确定</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210710092531.png" alt="放行端口"></p>
+<p>23333 是Mcserver Manager后台的端口</p>
+<p>除此之外，你还需要按照步骤2添加 25565 端口和 20010-20200 端口</p>
+<p><strong>到此，你就可以通过 公网IP:23333 访问你的服务器后台了</strong></p>
+<p><strong>初次登陆使用 用户名: #master 密码: 123456 登陆MCSM</strong></p>
+<p><strong>PS:及时更改密码!!!</strong></p>
+<h3 id="开启我的世界服务器"><a href="#开启我的世界服务器" class="headerlink" title="开启我的世界服务器"></a>开启我的世界服务器</h3><h4 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h4><p>你通过SSH连接服务器后 使用 <code>sudo yum install java-1.8.0-openjdk</code> 安装Java</p>
+<p>进入Mcserver Manager</p>
+<p>1.创建新实例应用</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210710093912.png" alt="Creative New Program"></p>
+<p>2.选择引导创建</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210710094131.png" alt="Guide Creative"></p>
+<p>实例名称随便填就行</p>
+<p>上传服务端(原版服务端在Wiki上可以找到 Spigot，Bukkit请查阅官网)</p>
+<p>3.设置启动参数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210710094551.png" alt="Start Count"></p>
+<p>如果你的服务器运行内存和我一样是2G，建议按图配置</p>
+<p>其他的根据需求配置即可</p>
+<p>4.开启服务器</p>
+<p>进入你刚才创建的实例</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210710094937.png" alt="Start Server"></p>
+<p>等待它把必要文件生成完整，你的服务器就可以运行了 o(≧v≦)o</p>
+<p><strong>输入 公网IP 就可以进入服务器</strong></p>
+<h3 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h3><p>设置自己的域名解析服务</p>
+<p>添加一条新记录</p>
+<p>主机记录: mc 记录类型: A 记录值: 公网IP</p>
+<p>意思就是把 mc.你的域名 指向你的服务器</p>
+<p><img src="https://smallkunkun.gitee.io/photo/dns.png" alt="DNS"></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+        <tag>Server</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何搭建个人图床</title>
+    <url>/post/f0c5abd8/</url>
+    <content><![CDATA[<h3 id="什么是图床"><a href="#什么是图床" class="headerlink" title="什么是图床"></a>什么是图床</h3><blockquote>
+<p>图床一般是指储存图片的服务器</p>
+</blockquote>
+<span id="more"></span>
+<hr>
+<h3 id="图床有什么用"><a href="#图床有什么用" class="headerlink" title="图床有什么用"></a>图床有什么用</h3><ul>
+<li><h5 id="以前将图片资源全部堆在网站根目录下，既不好管理，又不好调用，非常的麻烦😫-图床可以很好的管理图片和调用，所以对于我来说还是有必要的"><a href="#以前将图片资源全部堆在网站根目录下，既不好管理，又不好调用，非常的麻烦😫-图床可以很好的管理图片和调用，所以对于我来说还是有必要的" class="headerlink" title="以前将图片资源全部堆在网站根目录下，既不好管理，又不好调用，非常的麻烦😫 图床可以很好的管理图片和调用，所以对于我来说还是有必要的"></a>以前将图片资源全部堆在网站根目录下，既不好管理，又不好调用，非常的麻烦😫 图床可以很好的管理图片和调用，所以对于我来说还是有必要的</h5></li>
+</ul>
+<hr>
+<h3 id="免费的图床"><a href="#免费的图床" class="headerlink" title="免费的图床"></a>免费的图床</h3><ul>
+<li><h5 id="SM-MS👍"><a href="#SM-MS👍" class="headerlink" title="SM.MS👍"></a><a href="http://sm.ms/" title="SM.MS">SM.MS</a>👍</h5></li>
+</ul>
+<h5 id="由于免费服务的不稳定性，很多图床服务容易挂掉"><a href="#由于免费服务的不稳定性，很多图床服务容易挂掉" class="headerlink" title="由于免费服务的不稳定性，很多图床服务容易挂掉"></a>由于免费服务的不稳定性，很多图床服务容易挂掉</h5><hr>
+<h3 id="如何搭建个人图床"><a href="#如何搭建个人图床" class="headerlink" title="如何搭建个人图床"></a>如何搭建个人图床</h3><ul>
+<li><h5 id="需要准备的东西："><a href="#需要准备的东西：" class="headerlink" title="需要准备的东西："></a>需要准备的东西：</h5><h5 id="1-GitHub"><a href="#1-GitHub" class="headerlink" title="1. GitHub"></a>1. GitHub</h5><h5 id="2-PicGo"><a href="#2-PicGo" class="headerlink" title="2. PicGo"></a>2. PicGo</h5><h5 id="3-Hand-手动滑稽"><a href="#3-Hand-手动滑稽" class="headerlink" title="3. Hand(手动滑稽)"></a>3. Hand(手动滑稽)</h5></li>
+<li><h5 id="1-注册一个GitHub账号"><a href="#1-注册一个GitHub账号" class="headerlink" title="1.注册一个GitHub账号"></a>1.注册一个GitHub账号</h5></li>
+</ul>
+<p> 1⃣️.点击Sign UP</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210523105109.png"></p>
+<p> 2⃣️.按要求注册账号</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210523105618.png"></p>
+<hr>
+<ul>
+<li><h5 id="2-新建仓库"><a href="#2-新建仓库" class="headerlink" title="2.新建仓库"></a>2.新建仓库</h5></li>
+</ul>
+<p> 1⃣️.点击右上角加号 新建New repository</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210523105812.png"></p>
+<p> 2⃣️.在Repository name下输入Images 选择Public <strong>一定要勾选Add a README file</strong> 初始化仓库</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210523110156.png"></p>
+<hr>
+<ul>
+<li><h5 id="3-获取GitHub-Token"><a href="#3-获取GitHub-Token" class="headerlink" title="3.获取GitHub Token"></a>3.获取GitHub Token</h5></li>
+</ul>
+<p> 1⃣️.点击右上角的头像 进入GitHub Settings</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210523111829.png"></p>
+<p> 2⃣️.选择Developer settings</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210523111958.png"></p>
+<p> 3⃣️.选择Personal access tokens 点击Generate new token</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210523112149.png"></p>
+<p> 4⃣️.Note随便写 勾选repo</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210523112402.png"></p>
+<p> 5⃣️.复制Token 类似(ghp_#################)这样的</p>
+<hr>
+<ul>
+<li><h5 id="4-设置PicGo"><a href="#4-设置PicGo" class="headerlink" title="4.设置PicGo"></a>4.设置PicGo</h5></li>
+</ul>
+<p> 1⃣️.下载 <a href="https://github.com/Molunerfinn/PicGo/releases/tag/v2.2.2" title="PicGo">PicGo</a> (选择适合你电脑操作系统的安装文件)</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210523111102.png"></p>
+<p> 2⃣️.设置PicGo 单击图床设置 选择GitHub图床</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20210523112905.png"></p>
+<p> 3⃣️.GitHub设置<br>      1.设定仓库名：用户名/Images<br>      2.设定分支名：现在一般是main 但也可能是master<br>      3.设定Token：填入3⃣️ 的Token<br>      4.指定存储路径：可以不用填写<br>      5.设定自定义域名：<a href="https://cdn.jsdelivr.net/gh/%E7%94%A8%E6%88%B7%E5%90%8D/Images">https://cdn.jsdelivr.net/gh/用户名/Images</a> (这边使用的的是JSDelivr的CDN加速)<br>      6.点击设为默认图库即可</p>
+<ul>
+<li><h5 id="至此-你的个人图床就已经设定成功了-可以直接通过PicGo上传图片了"><a href="#至此-你的个人图床就已经设定成功了-可以直接通过PicGo上传图片了" class="headerlink" title="至此 你的个人图床就已经设定成功了 可以直接通过PicGo上传图片了"></a>至此 你的个人图床就已经设定成功了 可以直接通过PicGo上传图片了</h5></li>
+</ul>
+<hr>
+<ul>
+<li><h5 id="目前-本人的Blog的图片都是通过这种方法调用的-JSDelivr的CDN服务还是比较快的🙂-总之，体验效果还是蛮不错的"><a href="#目前-本人的Blog的图片都是通过这种方法调用的-JSDelivr的CDN服务还是比较快的🙂-总之，体验效果还是蛮不错的" class="headerlink" title="目前 本人的Blog的图片都是通过这种方法调用的 JSDelivr的CDN服务还是比较快的🙂 总之，体验效果还是蛮不错的"></a>目前 本人的Blog的图片都是通过这种方法调用的 JSDelivr的CDN服务还是比较快的🙂 总之，体验效果还是蛮不错的</h5></li>
+</ul>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+</search>
