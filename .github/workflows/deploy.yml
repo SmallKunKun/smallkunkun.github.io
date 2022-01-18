@@ -23,17 +23,22 @@ jobs:
         cd ../../
         npm run clean
         npm run build
-
-    - name: Hexo Deploy           # 部署步骤，这里以 hexo deploy 为例
+        
+    - name: Setup Deploy Private Key
       env:
-        SSH_PRIVATE: ${{ secrets.HEXO_DEPLOY_KEY }}
-        GIT_NAME: SmallKunKun
-        GIT_EMAIL: 1764746475@qq.com
+        HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
       run: |
         mkdir -p ~/.ssh/
-        echo "$HEXO_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+        echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
-        git config --global user.name "$GIT_NAME"
-        git config --global user.email "$GIT_EMAIL"
+        
+    - name: Setup Git Information
+      run: |
+        git config --global user.name 'SmallKunKun'
+        git config --global user.email '1764746475@qq.com'
+        
+    - name: Deploy Hexo
+      run: |
         npm run deploy
+      
