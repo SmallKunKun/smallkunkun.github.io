@@ -1,43 +1,49 @@
-name: Build and Deploy
-on: 
+# 任务名称：任意
+name: Deploy Blog Pages
+
+# 触发条件
+on:
+  # push，也就是推送到仓库时才执行任务
   push:
-      branches:
-        - main #push到哪个分支时触发自动部署，推荐main
+    # 分支，这里选择 main，也就是只有推送到 main 分支时才执行任务【可选】
+    branches:
+      - main
+
+# 任务
 jobs:
+  # 任务名称，任意
   build-and-deploy:
+    # 服务器环境：最新版 Ubuntu
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+      # 拉取
+      - name: 📦 Checkout
+        uses: actions/checkout@v2
+        
+      - name: Setup Node            # 安装 Node 环境
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.3.0"
+          
+      - name: Hexo Generate         # 安装 Hexo 依赖并且生成静态文件
+        run: |
+          npm i
+          npm i hexo-renderer-swig
+          cd themes/sagiri/
+          npm i && npm install --save nprogress
+          cd ../../
+          npm run clean
+          npm run build
 
-    - name: Setup Node            # 安装 Node 环境
-      uses: actions/setup-node@v1
-      with:
-        node-version: "12.3.0"
-    - name: Hexo Generate         # 安装 Hexo 依赖并且生成静态文件
-      run: |
-        npm i
-        npm i hexo-renderer-swig
-        cd themes/sagiri/
-        npm i && npm install --save nprogress
-        cd ../../
-        npm run clean
-        npm run build
-        
-    - name: Setup Deploy Private Key
-      env:
-        HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
-      run: |
-        mkdir -p ~/.ssh/
-        echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-        
-    - name: Setup Git Information
-      run: |
-        git config --global user.name 'SmallKunKun'
-        git config --global user.email '1764746475@qq.com'
-        
-    - name: Hexo Deploy
-      uses: Solybum/hexo-deploy@1.1
-      
+      # 部署到 GitHub Pages
+      - name: 🚀 Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          # GitHub 的 Personal access token
+          token: ${{secrets.PAT}}
+          # 更换为自己的 <user>/<user>.github.io
+          repository-name: SmallKunKun/SmallKunKun.github.io
+          # 要部署到的分支
+          branch: gh-pages
+          # 上一步生成的静态文件的地址
+          folder: public
