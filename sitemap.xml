@@ -2,34 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kunkun.netlify.app/post/4a17b156/</loc>
-    
-    <lastmod>2022-01-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kunkun.netlify.app/post/4cd3912b/</loc>
-    
-    <lastmod>2022-01-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kunkun.netlify.app/post/f0c5abd8/</loc>
-    
-    <lastmod>2022-01-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kunkun.netlify.app/about/index.html</loc>
-    
-    <lastmod>2022-01-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kunkun.netlify.app/categories/index.html</loc>
     
     <lastmod>2022-01-18</lastmod>
@@ -52,6 +24,34 @@
   
   <url>
     <loc>https://kunkun.netlify.app/tags/index.html</loc>
+    
+    <lastmod>2022-01-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.netlify.app/post/4a17b156/</loc>
+    
+    <lastmod>2022-01-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.netlify.app/post/4cd3912b/</loc>
+    
+    <lastmod>2022-01-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.netlify.app/post/f0c5abd8/</loc>
+    
+    <lastmod>2022-01-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.netlify.app/about/index.html</loc>
     
     <lastmod>2022-01-18</lastmod>
     
