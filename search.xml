@@ -153,4 +153,16 @@
         <tag>技术</tag>
       </tags>
   </entry>
+  <entry>
+    <title>测试Github Actions</title>
+    <url>/post/72821a12/</url>
+    <content><![CDATA[<p>测试Github Actions</p>
+]]></content>
+      <categories>
+        <category>Github Actions</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
 </search>
