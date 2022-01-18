@@ -103,7 +103,9 @@ theme: sagiri
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/SmallKunKun/SmallKunKun.github.io.git
+  branch: gh-pages
   
 # 永久链接
 # abbrlink config
