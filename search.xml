@@ -20,6 +20,65 @@
 ]]></content>
   </entry>
   <entry>
+    <title>使用Github Actions部署个人博客</title>
+    <url>/post/a48345af/</url>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/22-1-20.png"></p>
+<p>我的博客之前一直使用Hexo+Netlify CMS这套方案，而Netlify的域名不好记，需要自己购买域名绑定。但我在之前已经申请到了<a href="https://js.org/">js.org</a>的免费域名(<strong>现在不能以个人博客等理由申请</strong>)，作为资深<del>白嫖怪</del>，那当然会使用这个免费域名。之前申请，域名的CNAME指向我的<code>github.io</code>二级域名，无法指向Netlify。所以，这篇文章便诞生了。</p>
+<span id="more"></span>
+
+<p>Netlify CMS的原理就是将你的文章放在一个新的分支，当你选择发布，你的新分支会和博客主分支合并。Netlify检测到你的博客主分支有变动，就会开始部署网页。</p>
+<p>那么，只要有一个脚本能检测到你的博客主分支有变动，和Netlify一样部署网页，最后将生成的文件推送到<code>github.io</code>所在的仓库就行了。</p>
+<p>Github Actions(<a href="https://docs.github.com/cn/actions">这是什么?</a>)服务就可以实现此功能。我们只需要编写好脚本，就能完成上述操作。</p>
+<hr>
+<h2 id="使用Github-Actions"><a href="#使用Github-Actions" class="headerlink" title="使用Github Actions"></a>使用Github Actions</h2><h3 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h3><p>1.进入Settings</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120202011.png"></p>
+<p>2.点击 <code>Developer settings</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120202209.png"></p>
+<p>3.点击 <code>Personal access tokens</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120202311.png"></p>
+<p>4.点击 <code>Generate new token</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120202408.png"></p>
+<p>5.Note一栏填写 <code>PAT</code> (别改此项，后面有用)，Expiration选择 <code>No Expiration</code> ，Select scopes勾选 <code>workflow</code> ，点击 <code>Generate token</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120202723.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120203001.png"></p>
+<p>6.复制token</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120203231.png"></p>
+<hr>
+<h3 id="编写Github-Actions脚本"><a href="#编写Github-Actions脚本" class="headerlink" title="编写Github Actions脚本"></a>编写Github Actions脚本</h3><p>1.开启Github Actions(若已经开启可以跳过该步骤)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120203759.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120203854.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120204007.png"></p>
+<p>2.进入Github Actions</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120204113.png"></p>
+<p>3.点击 <code>set up a workflow yourself</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120204638.png"></p>
+<p>4.编辑main.yml文件</p>
+<p>删除文件中默认的内容</p>
+<p>写入以下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">name: Deploy Blog Pages</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - main</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  build-and-deploy:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@v2</span><br><span class="line">        </span><br><span class="line">      - name: Setup Node            </span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: &quot;12.3.0&quot;</span><br><span class="line">          </span><br><span class="line">      - name: Hexo Generate         </span><br><span class="line">        run: |</span><br><span class="line">          npm i</span><br><span class="line">          npm run build</span><br><span class="line">          </span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: JamesIves/github-pages-deploy-action@releases/v4</span><br><span class="line">        with:</span><br><span class="line">          token: $&#123;&#123;secrets.PAT&#125;&#125;</span><br><span class="line">          repository-name: //此处填写你需要推送的仓库地址</span><br><span class="line">          branch: main</span><br><span class="line">          folder: public</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>最后保存该文件</p>
+<hr>
+<h3 id="绑定token"><a href="#绑定token" class="headerlink" title="绑定token"></a>绑定token</h3><p>1.进入仓库的Settings</p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120203759.png"></p>
+<p>2.点击 <code>Secrets</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120205640.png"></p>
+<p>3.点击 <code>New repository secret</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120205756.png"></p>
+<p>4.Name一栏填写 <code>PAT</code> ，Value一栏填写之前复制的token，点击 <code>Add secret</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/SmallKunKun/Photo/20220120210056.png"></p>
+<hr>
+<p>至此，你可以使用Github Actions部署你的页面了。</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Github Actions</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何建立一个Minecraft服务器</title>
     <url>/post/4cd3912b/</url>
     <content><![CDATA[<p><img src="https://smallkunkun.gitee.io/photo/101.png" alt="Head-Photo"></p>
@@ -78,9 +137,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>教程</tag>
         <tag>Minecraft</tag>
         <tag>Server</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
