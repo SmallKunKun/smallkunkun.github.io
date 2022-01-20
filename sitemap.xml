@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kunkun.netlify.app/post/4a17b156/</loc>
-    
-    <lastmod>2022-01-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kunkun.netlify.app/post/4cd3912b/</loc>
-    
-    <lastmod>2022-01-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kunkun.netlify.app/post/f0c5abd8/</loc>
-    
-    <lastmod>2022-01-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kunkun.netlify.app/post/72821a12/</loc>
-    
-    <lastmod>2022-01-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kunkun.netlify.app/about/index.html</loc>
-    
-    <lastmod>2022-01-19</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kunkun.netlify.app/categories/index.html</loc>
     
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     
   </url>
   
   <url>
     <loc>https://kunkun.netlify.app/friends/index.html</loc>
     
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     
   </url>
   
   <url>
     <loc>https://kunkun.netlify.app/message/index.html</loc>
     
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     
   </url>
   
   <url>
     <loc>https://kunkun.netlify.app/tags/index.html</loc>
     
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.netlify.app/post/4a17b156/</loc>
+    
+    <lastmod>2022-01-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.netlify.app/post/4cd3912b/</loc>
+    
+    <lastmod>2022-01-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.netlify.app/post/f0c5abd8/</loc>
+    
+    <lastmod>2022-01-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.netlify.app/post/72821a12/</loc>
+    
+    <lastmod>2022-01-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.netlify.app/about/index.html</loc>
+    
+    <lastmod>2022-01-20</lastmod>
     
   </url>
   
 
   <url>
     <loc>https://kunkun.netlify.app/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,35 +75,35 @@
   
   <url>
     <loc>https://kunkun.netlify.app/tags/Minecraft/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://kunkun.netlify.app/tags/Server/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://kunkun.netlify.app/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://kunkun.netlify.app/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://kunkun.netlify.app/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -112,14 +112,14 @@
   
   <url>
     <loc>https://kunkun.netlify.app/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://kunkun.netlify.app/categories/Github-Actions/</loc>
-    <lastmod>2022-01-19</lastmod>
+    <lastmod>2022-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
