@@ -2,34 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kunkun.js.org/friends/index.html</loc>
-    
-    <lastmod>2022-04-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kunkun.js.org/message/index.html</loc>
-    
-    <lastmod>2022-04-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kunkun.js.org/shuoshuo/index.html</loc>
-    
-    <lastmod>2022-04-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kunkun.js.org/tags/index.html</loc>
-    
-    <lastmod>2022-04-03</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kunkun.js.org/post/4a17b156/</loc>
     
     <lastmod>2022-04-03</lastmod>
@@ -80,6 +52,34 @@
   
   <url>
     <loc>https://kunkun.js.org/categories/index.html</loc>
+    
+    <lastmod>2022-04-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.js.org/friends/index.html</loc>
+    
+    <lastmod>2022-04-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.js.org/message/index.html</loc>
+    
+    <lastmod>2022-04-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.js.org/shuoshuo/index.html</loc>
+    
+    <lastmod>2022-04-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kunkun.js.org/tags/index.html</loc>
     
     <lastmod>2022-04-03</lastmod>
     
