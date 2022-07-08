@@ -137,7 +137,7 @@ img.on("dragstart",function(){return false;});
 })(jQuery);
 </script>
 
-<link rel="preload" href="https://fastly.jsdelivr.net/gh/DIYgod/diygod.me@gh-pages/fonts/Candyshop.otf" as="font" type="font/otf" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/DIYgod/diygod.me/themes/sagiri/source/fonts/Candyshop.otf" as="font" type="font/otf" crossorigin="anonymous">
 
 
 
@@ -172,23 +172,23 @@ img.on("dragstart",function(){return false;});
 
   
 
-<link href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
 
 
 
   
 
-<link href="https://fastly.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.0.74" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=1.0.11" rel="stylesheet" type="text/css" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/icon.png?v=0.0.74">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/icon.png?v=0.0.74">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://img.kunkun.eu.org/img/icon.png?v=1.0.11">
 
 
-  <link rel="mask-icon" href="https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/icon.png?v=0.0.74" color="#fff">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://img.kunkun.eu.org/img/icon.png?v=1.0.11">
+
+
+  <link rel="mask-icon" href="https://img.kunkun.eu.org/img/icon.png?v=1.0.11" color="#fff">
 
 
   <link rel="manifest" href="/manifest.json">
@@ -197,7 +197,7 @@ img.on("dragstart",function(){return false;});
 
 
 
-  <meta name="keywords" content="SmallKunKun,Blog" />
+  <meta name="keywords" content="DIYgod,blog" />
 
 
 
@@ -226,8 +226,8 @@ img.on("dragstart",function(){return false;});
   var CONFIG = {
     root: '',
     scheme: 'Pisces',
-    version: '0.0.74',
-    sidebar: {"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false},
+    version: '1.0.11',
+    sidebar: {"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false,"pixiv":true},
     fancybox: false,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -249,14 +249,14 @@ img.on("dragstart",function(){return false;});
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     leancloud: {
-      enable: false,
-      appID: '',
-      appKey: ''
+      enable: true,
+      appID: 'IGRfXf6MmzvwpjQBjASXLrc9-MdYXbMMI',
+      appKey: 'yrkr4UuA5ibUAkdKC3gPFEYV'
     },
     favicon: {
       visibilitychange: true,
-      narmal: 'https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/icon.png',
-      hidden: 'https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/zhilingcuowu.png',
+      narmal: 'https://img.kunkun.eu.org/img/icon.png',
+      hidden: 'https://img.kunkun.eu.org/img/error.png',
       show_text: '(/≧▽≦/)咦！又好了！',
       hide_text: '(●—●)喔哟，崩溃啦！'
     }
@@ -266,9 +266,9 @@ img.on("dragstart",function(){return false;});
 
 
 
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 
-  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/disqusjs@1.2.2/dist/disqus.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/disqusjs@1.2.2/dist/disqus.js"></script>
 
 
 
@@ -284,15 +284,6 @@ img.on("dragstart",function(){return false;});
 
 
 
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-48084758-7', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
 
@@ -339,28 +330,28 @@ img.on("dragstart",function(){return false;});
               
                 
                 <li class="submenu-item submenu-item-网盘">
-                  <a href="https://pan.kunkun.eu.org/" rel="section" target="_blank">
+                  <a target="_blank" href="https://pan.kunkun.eu.org/" rel="section noopener">
                     网盘
                   </a>
                 </li>
               
                 
                 <li class="submenu-item submenu-item-起始">
-                  <a href="https://search.kunkun.eu.org/" rel="section" target="_blank">
+                  <a target="_blank" href="https://search.kunkun.eu.org/" rel="section noopener">
                     起始
                   </a>
                 </li>
               
                 
                 <li class="submenu-item submenu-item-链接">
-                  <a href="https://url.kunkun.eu.org/" rel="section" target="_blank">
+                  <a target="_blank" href="https://url.kunkun.eu.org/" rel="section noopener">
                     链接
                   </a>
                 </li>
               
                 
                 <li class="submenu-item submenu-item-监控">
-                  <a href="https://stats.uptimerobot.com/XPnkGh44pQ/" rel="section" target="_blank">
+                  <a target="_blank" href="https://status.kunkun.eu.org/" rel="section noopener">
                     监控
                   </a>
                 </li>
@@ -441,10 +432,10 @@ img.on("dragstart",function(){return false;});
 <div class="site-brand-wrapper">
   <div class="site-brand-bg">
     <picture>
-      <source srcset="https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/ad7d5a9e713816b53d0e01566327d6fa.jpg" type="image/webp" media="(max-width: 500px)">
-      <source srcset="https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/ad7d5a9e713816b53d0e01566327d6fa.jpg" type="image/png" media="(max-width: 500px)">
-      <source srcset="https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/ad7d5a9e713816b53d0e01566327d6fa.jpg" type="image/webp">
-      <img loading="lazy" src="https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/ad7d5a9e713816b53d0e01566327d6fa.jpg">
+      <source srcset="https://img.kunkun.eu.org/background/4.jpeg" type="image/webp" media="(max-width: 500px)">
+      <source srcset="https://img.kunkun.eu.org/background/4.jpeg" type="image/png" media="(max-width: 500px)">
+      <source srcset="https://img.kunkun.eu.org/background/4.jpeg" type="image/webp">
+      <img loading="lazy" src="https://img.kunkun.eu.org/background/4.jpeg">
     </picture>
   </div>
   <div class="site-meta ">
@@ -569,7 +560,7 @@ img.on("dragstart",function(){return false;});
   </div>
 </div>
 <div class="site-master" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-master-avatar scaleup" itemprop="image" src="https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/g.jpeg" alt="" />
+    <img class="site-master-avatar scaleup" itemprop="image" src="https://img.kunkun.eu.org/img/kunkun.jpg" alt="" />
     <h2 class="site-master-description scaleup" itemprop="description">
         Hello World!
     </h2>
@@ -596,7 +587,7 @@ img.on("dragstart",function(){return false;});
             分类
         </div>
         <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-count">3</span></li></ul>
+          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-count">2</span></li></ul>
         </div>
       </div>
 
@@ -623,7 +614,7 @@ img.on("dragstart",function(){return false;});
 
       <h2 class="post-title">
         
-            <a class="post-title-link scaleup" href="/%E5%A6%82%E4%BD%95%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/" itemprop="url">
+            <a class="post-title-link scaleup" href="/54420" itemprop="url">
               
                 <span itemprop="name">如何建立一个Minecraft服务器</span>
               
@@ -719,34 +710,40 @@ img.on("dragstart",function(){return false;});
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="https://fastly.jsdelivr.net/gh/SmallKunKun/Photo/g.jpeg"
-                alt="" />
-            
-              <p class="site-author-name" itemprop="name"><span style="opacity:.2;"></span>SmallKunKun</p>
-              <p class="site-description motion-element" itemprop="description">Hello World!</p>
+            <img class="site-author-image" itemprop="image"
+              src="https://img.kunkun.eu.org/img/kunkun.jpg"
+              alt="" />
+            <div class="site-author-info">
+              <p class="site-author-name" itemprop="name">SmallKunKun</p>
+              <p class="site-description motion-element" itemprop="description">Hello World! 究极白嫖怪，所有的网页服务均Free。没有什么作品，大部分GitHub项目是基于别人项目修改而来。喜欢就给原作者一个Star吧!</p>
+            </div>
           </div>
 
           <div class="links-of-author motion-element">
             
               
                 <span class="links-of-author-item scaleup">
-                  <a href="https://github.com/smallkunkun" target="_blank" title="github">
+                  <a href="https://github.com/SmallKunKun" target="_blank" title="GitHub">
                     
-                       <i class="fab fa-github" style="color: #191717"><span>Github</span></i></a>
-                </span>
-              
-                <span class="links-of-author-item scaleup">
-                  <a href="https://twitter.com/Small_KunKun" target="_blank" title="twitter">
-                    
-                       <i class="fab fa-twitter" style="color: #2FB0EC"><span>SmallKunKun</span></i></a>
+                       <i class="fab fa-github" style="color: #191717"></i><span>SmallKunKun</span></a>
                 </span>
               
                 <span class="links-of-author-item scaleup">
                   <a href="https://www.pixiv.net/users/66642954" target="_blank" title="pixiv">
                     
-                       <i><svg t="1581192678406" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1663"><path d="M701.515 301.152c-44.44-46.092-100.245-64.919-163.08-65.107-29.552-0.089-58.595 4.617-87.095 12.455-28.961 7.965-56.673 18.839-81.996 35.306-3.347 2.176-4.69 4.686-4.695 8.694-0.034 29.713-0.333 59.424-0.426 89.137-0.085 27.263-0.018 54.527-0.021 81.79-0.004 56.836 0.053 113.674-0.097 170.51-0.015 5.326 1.57 8.393 6.639 10.576 17.881 7.7 36.245 13.85 55.161 18.37 30.808 7.36 62.082 10.876 93.715 12.36 33.75 1.583 66.83-1.28 98.832-12.378 61.328-21.265 105.46-61.217 129.447-121.99 15.492-39.25 17.417-80.058 10.877-121.393-7.146-45.173-25.384-85.268-57.26-118.33z" fill="#0074AA" p-id="1664"></path><path d="M512 17.482C238.886 17.482 17.482 238.886 17.482 512S238.886 1006.518 512 1006.518 1006.518 785.114 1006.518 512 785.114 17.482 512 17.482z m327.127 530.516c-18.962 47.58-50.687 84.816-92.709 113.517-43.734 29.872-92.452 46.554-144.647 53.74-66.355 9.136-131.115 0.236-195.108-17.307-12.485-3.423-24.767-7.483-37.009-11.676-4.732-1.62-5.413-1.201-5.42 3.878-0.049 33.583 0.004 67.165-0.069 100.748-0.008 3.782 1.314 5.86 5.093 7.004 7.233 2.187 14.26 5.003 20.384 9.602 3.594 2.699 6.19 5.968 5.824 10.873-0.43 5.752-3.64 8.957-9.432 8.968-19.872 0.039-39.744 0.014-59.617 0.014-19.41 0.006-38.82-0.103-58.23 0.082-4.736 0.045-8.025-1.288-9.814-5.842-1.798-4.575-0.752-8.45 2.566-11.847 5.698-5.833 13.181-8.404 20.593-11 7.625-2.668 7.8-0.933 7.8-10.86-0.02-151.738-0.02-303.476-0.076-455.215-0.001-2.353 1.227-5.726-1.09-6.829-2.297-1.094-4.167 1.976-6 3.442-22.584 18.058-43.474 37.783-60.052 61.694-0.527 0.76-1.03 1.537-1.588 2.273-5.878 7.727-9.827 15.6-5.76 25.855 1.946 4.91 1.707 10.59 0.282 15.968-0.937 3.532-2.436 6.64-5.44 8.865-5.016 3.718-8.469 3.16-11.788-2.085-12.847-20.308-25.59-40.682-38.532-60.928-2.117-3.313-1.999-5.634 0.715-8.492 17.758-18.692 37.058-35.675 57.256-51.635 51.148-40.413 106.911-72.725 168.335-94.902 40.036-14.455 81.234-23.72 123.709-27.312 49.596-4.194 98.488-0.765 146.365 13.295 50.8 14.919 95.584 40.146 131.966 79.103 36.324 38.896 58.162 84.856 65.163 137.62 5.425 40.866 1.694 80.839-13.67 119.389z" fill="#0074AA" p-id="1665"></path></svg><span>SmallKunKun</span></i></a>
+                       <i><svg t="1581192678406" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1663"><path d="M701.515 301.152c-44.44-46.092-100.245-64.919-163.08-65.107-29.552-0.089-58.595 4.617-87.095 12.455-28.961 7.965-56.673 18.839-81.996 35.306-3.347 2.176-4.69 4.686-4.695 8.694-0.034 29.713-0.333 59.424-0.426 89.137-0.085 27.263-0.018 54.527-0.021 81.79-0.004 56.836 0.053 113.674-0.097 170.51-0.015 5.326 1.57 8.393 6.639 10.576 17.881 7.7 36.245 13.85 55.161 18.37 30.808 7.36 62.082 10.876 93.715 12.36 33.75 1.583 66.83-1.28 98.832-12.378 61.328-21.265 105.46-61.217 129.447-121.99 15.492-39.25 17.417-80.058 10.877-121.393-7.146-45.173-25.384-85.268-57.26-118.33z" fill="#0074AA" p-id="1664"></path><path d="M512 17.482C238.886 17.482 17.482 238.886 17.482 512S238.886 1006.518 512 1006.518 1006.518 785.114 1006.518 512 785.114 17.482 512 17.482z m327.127 530.516c-18.962 47.58-50.687 84.816-92.709 113.517-43.734 29.872-92.452 46.554-144.647 53.74-66.355 9.136-131.115 0.236-195.108-17.307-12.485-3.423-24.767-7.483-37.009-11.676-4.732-1.62-5.413-1.201-5.42 3.878-0.049 33.583 0.004 67.165-0.069 100.748-0.008 3.782 1.314 5.86 5.093 7.004 7.233 2.187 14.26 5.003 20.384 9.602 3.594 2.699 6.19 5.968 5.824 10.873-0.43 5.752-3.64 8.957-9.432 8.968-19.872 0.039-39.744 0.014-59.617 0.014-19.41 0.006-38.82-0.103-58.23 0.082-4.736 0.045-8.025-1.288-9.814-5.842-1.798-4.575-0.752-8.45 2.566-11.847 5.698-5.833 13.181-8.404 20.593-11 7.625-2.668 7.8-0.933 7.8-10.86-0.02-151.738-0.02-303.476-0.076-455.215-0.001-2.353 1.227-5.726-1.09-6.829-2.297-1.094-4.167 1.976-6 3.442-22.584 18.058-43.474 37.783-60.052 61.694-0.527 0.76-1.03 1.537-1.588 2.273-5.878 7.727-9.827 15.6-5.76 25.855 1.946 4.91 1.707 10.59 0.282 15.968-0.937 3.532-2.436 6.64-5.44 8.865-5.016 3.718-8.469 3.16-11.788-2.085-12.847-20.308-25.59-40.682-38.532-60.928-2.117-3.313-1.999-5.634 0.715-8.492 17.758-18.692 37.058-35.675 57.256-51.635 51.148-40.413 106.911-72.725 168.335-94.902 40.036-14.455 81.234-23.72 123.709-27.312 49.596-4.194 98.488-0.765 146.365 13.295 50.8 14.919 95.584 40.146 131.966 79.103 36.324 38.896 58.162 84.856 65.163 137.62 5.425 40.866 1.694 80.839-13.67 119.389z" fill="#0074AA" p-id="1665"></path></svg></i><span>SmallKunKun</span></a>
+                </span>
+              
+                <span class="links-of-author-item scaleup">
+                  <a href="https://twitter.com/Small_KunKun" target="_blank" title="Twitter">
+                    
+                       <i class="fab fa-twitter" style="color: #2FB0EC"></i><span>SmallKunKun</span></a>
+                </span>
+              
+                <span class="links-of-author-item scaleup">
+                  <a href="mailto:me@kunkun.eu.org" target="_blank" title="email">
+                    
+                       <i class="fa fa-envelope" style="color: #191717"></i><span>SmallKunKun</span></a>
                 </span>
               
             
@@ -785,10 +782,7 @@ img.on("dragstart",function(){return false;});
               </div>
           </div>
 
-          <details class="views-top-wrap">
-            <summary class="views-top-name scaleup">看爆 Top5</summary>
-            <ul class="views-top"></ul>
-          </details>
+          
 
           
 
@@ -805,6 +799,14 @@ img.on("dragstart",function(){return false;});
       
 
     </div>
+
+    
+    <div class="sidebar-pixiv sidebar-inner">
+      <div class="sidebar-pixiv-header">Pixiv日榜</div>
+      <div class="sidebar-pixiv-description">Powered by <a herf="https://hujingnb.com/" target="_blank">烟草的香味</a></div>
+      <div class="sidebar-pixiv-body sidebar-pixiv-loading"><iframe src="https://fun.hujingnb.com/pixiv/i" frameborder="0"  style="width:240px; height:380px;"></iframe></div>
+    </div>
+    
   </aside>
 
 
@@ -814,15 +816,15 @@ img.on("dragstart",function(){return false;});
 
     <footer id="footer" class="footer">
       <div class="footer-image">
-        <img src="https://fastly.jsdelivr.net/gh/DIYgod/diygod.me@gh-pages/images/footer.png">
+        <img src="https://img.kunkun.eu.org/img/footer.png">
       </div>
       <div class="footer-inner">
-        <p>博客已萌萌哒运行<span id="since"></span><span class="my-face">(●'◡'●)ﾉ♥</span></p>
+        <p>博客已运行<span id="since"></span><span class="my-face">(●'◡'●)ﾉ♥</span></p>
 
 <p>© <span itemprop="copyrightYear">2022</span> SmallKunKun.
     由 <a href="https://hexo.io/" target="_blank" class="external" rel="nofollow">Hexo</a> 强力驱动.
-    Theme By <a href="https://github.com/DIYgod/hexo-theme-sagiri" target="_blank" class="external" rel="nofollow">Sagiri</a> v0.0.74.
-    托管于<a href="https://github.com/" target="_blank" rel="nofollow"> GitHub</a>. <a href="https://www.cloudflare.com/" target="_blank" rel="nofollow">Cloudflare </a>提供 DNS 解析服务.<a href="https://kunkun.eu.org/admin" target="_blank" rel="nofollow"> 后台</a>.
+    Theme By <a href="https://github.com/DIYgod/hexo-theme-sagiri" target="_blank" class="external" rel="nofollow">Sagiri</a> v1.0.11.
+    萌ICP备 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://icp.gov.moe/?keyword=20220036">20220036号</a>.
     <a href="/sitemap.xml" target="_blank">站点地图</a>.
 </p>
 <p>Made with <i class="fas fa-heart throb" style="color: #d43f57;"></i> by <span class="author" itemprop="copyrightHolder">SmallKunKun</span>. </p>
@@ -844,7 +846,7 @@ img.on("dragstart",function(){return false;});
 
     
       <div class="back-to-top">
-        <img src="https://fastly.jsdelivr.net/gh/DIYgod/diygod.me@gh-pages/images/scroll.png">
+        <img src="https://img.kunkun.eu.org/img/scroll.png">
         
       </div>
     
@@ -855,7 +857,8 @@ img.on("dragstart",function(){return false;});
 
   </div>
 
-  <script type="text/javascript" src="/js/sagiri.min.js?v=0.0.74"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script type="text/javascript" src="/js/sagiri.min.js?v=1.0.11"></script>
 
   
 
