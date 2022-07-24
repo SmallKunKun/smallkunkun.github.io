@@ -197,7 +197,7 @@ img.on("dragstart",function(){return false;});
 
 
 
-  <meta name="keywords" content="教程,Minecraft,Server," />
+  <meta name="keywords" content="Minecraft,Server,教程," />
 
 
 
@@ -227,11 +227,11 @@ img.on("dragstart",function(){return false;});
 <meta property="og:image" content="https://img.kunkun.eu.org/article/54420/09.png">
 <meta property="og:image" content="https://img.kunkun.eu.org/article/54420/10.png">
 <meta property="article:published_time" content="2021-09-11T21:59:10.000Z">
-<meta property="article:modified_time" content="2022-07-24T13:27:13.209Z">
+<meta property="article:modified_time" content="2022-07-24T13:31:45.841Z">
 <meta property="article:author" content="SmallKunKun">
-<meta property="article:tag" content="教程">
 <meta property="article:tag" content="Minecraft">
 <meta property="article:tag" content="Server">
+<meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img.kunkun.eu.org/background/1.jpeg">
 
@@ -770,11 +770,11 @@ img.on("dragstart",function(){return false;});
       
         <div class="post-tags">
           
-            <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
-          
             <a href="/tags/Minecraft/" rel="tag"># Minecraft</a>
           
             <a href="/tags/Server/" rel="tag"># Server</a>
+          
+            <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
           
         </div>
       
