@@ -1,9 +1,9 @@
-  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
-  <div id="waline"></div>
-  <script>
-    Waline.init({
-      el: '#waline',
-      serverURL: 'https://waline.kunkun.eu.org/',
-    });
-  </script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'TwoMzthlb3inyAyX1LjvtjMq-MdYXbMMI',
+        appKey: 'a44Z6mzqB0VmS0S5kd8u29gz'
+    })
+</script>
