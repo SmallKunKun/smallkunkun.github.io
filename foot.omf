@@ -1,9 +1,0 @@
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<div id="vcomments"></div>
-<script>
-    new Valine({
-        el: '#vcomments',
-        appId: 'TwoMzthlb3inyAyX1LjvtjMq-MdYXbMMI',
-        appKey: 'a44Z6mzqB0VmS0S5kd8u29gz'
-    })
-</script>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>//16107/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+<h2 id="Quick-Start">Quick Start</h2>
+<h3 id="Create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>使用Github Actions部署个人博客</title>
+    <url>//64838/</url>
+    <content><![CDATA[<p><img src="https://img.kunkun.eu.org/background/3.jpg" alt=""></p>
+<p>我的博客之前一直使用Hexo+Netlify CMS这套方案，而Netlify的域名不好记，需要自己购买域名绑定。但我在之前已经申请到了<a href="https://js.org">js.org</a>的免费域名(<strong>现在不能以个人博客等理由申请</strong>)，作为资深<s>白嫖怪</s>，那当然会使用这个免费域名。之前申请，域名的CNAME指向我的<code>github.io</code>二级域名，无法指向Netlify。所以，这篇文章便诞生了。</p>
+<span id="more"></span>
+<p>Netlify CMS的原理就是将你的文章放在一个新的分支，当你选择发布，你的新分支会和博客主分支合并。Netlify检测到你的博客主分支有变动，就会开始部署网页。</p>
+<p>那么，只要有一个脚本能检测到你的博客主分支有变动，和Netlify一样部署网页，最后将生成的文件推送到<code>github.io</code>所在的仓库就行了。</p>
+<p>Github Actions(<a href="https://docs.github.com/cn/actions">这是什么?</a>)服务就可以实现此功能。我们只需要编写好脚本，就能完成上述操作。</p>
+<hr>
+<h2 id="使用Github-Actions">使用Github Actions</h2>
+<h3 id="获取token">获取token</h3>
+<p>1.进入Settings</p>
+<p><img src="https://img.kunkun.eu.org/article/64838/01.png" alt=""></p>
+<p>2.点击 <code>Developer settings</code></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/02.png" alt=""></p>
+<p>3.点击 <code>Personal access tokens</code></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/03.png" alt=""></p>
+<p>4.点击 <code>Generate new token</code></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/04.png" alt=""></p>
+<p>5.Note一栏填写 <code>PAT</code> (别改此项，后面有用)，Expiration选择 <code>No Expiration</code> ，Select scopes勾选 <code>workflow</code> ，点击 <code>Generate token</code></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/05.png" alt=""></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/06.png" alt=""></p>
+<p>6.复制token</p>
+<p><img src="https://img.kunkun.eu.org/article/64838/07.png" alt=""></p>
+<hr>
+<h3 id="编写Github-Actions脚本">编写Github Actions脚本</h3>
+<p>1.开启Github Actions(若已经开启可以跳过该步骤)</p>
+<p><img src="https://img.kunkun.eu.org/article/64838/08.png" alt=""></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/09.png" alt=""></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/10.png" alt=""></p>
+<p>2.进入Github Actions</p>
+<p><img src="https://img.kunkun.eu.org/article/64838/11.png" alt=""></p>
+<p>3.点击 <code>set up a workflow yourself</code></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/12.png" alt=""></p>
+<p>4.编辑main.yml文件</p>
+<p>删除文件中默认的内容</p>
+<p>写入以下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">name: Deploy Blog Pages</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - main</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  build-and-deploy:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@v2</span><br><span class="line">        </span><br><span class="line">      - name: Setup Node            </span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: &quot;12.3.0&quot;</span><br><span class="line">          </span><br><span class="line">      - name: Hexo Generate         </span><br><span class="line">        run: |</span><br><span class="line">          npm i</span><br><span class="line">          npm run build</span><br><span class="line">          </span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: JamesIves/github-pages-deploy-action@releases/v4</span><br><span class="line">        with:</span><br><span class="line">          token: $&#123;&#123;secrets.PAT&#125;&#125;</span><br><span class="line">          repository-name: //此处填写你需要推送的仓库地址</span><br><span class="line">          branch: main</span><br><span class="line">          folder: public</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>最后保存该文件</p>
+<hr>
+<h3 id="绑定token">绑定token</h3>
+<p>1.进入仓库的Settings</p>
+<p><img src="https://img.kunkun.eu.org/article/64838/08.png" alt=""></p>
+<p>2.点击 <code>Secrets</code></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/13.png" alt=""></p>
+<p>3.点击 <code>New repository secret</code></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/14.png" alt=""></p>
+<p>4.Name一栏填写 <code>PAT</code> ，Value一栏填写之前复制的token，点击 <code>Add secret</code></p>
+<p><img src="https://img.kunkun.eu.org/article/64838/15.png" alt=""></p>
+<hr>
+<p>至此，你可以使用Github Actions部署你的页面了</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Github Actions</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何建立一个Minecraft服务器</title>
+    <url>//54420/</url>
+    <content><![CDATA[<p><img src="https://img.kunkun.eu.org/background/1.jpeg" alt="Head-Photo"></p>
+<p>一个人玩我的世界当然很无聊哈，所以我们就会建立一个我的世界服务器邀请我们的朋友一起玩 (≧▽≦)/</p>
+<span id="more"></span>
+<h3 id="服务器的选择">服务器的选择</h3>
+<p>1.<a href="https://developer.aliyun.com/plan/grow-up">阿里云学生服务器</a></p>
+<p><img src="https://img.kunkun.eu.org/article/54420/01.png" alt="Aliyun Student Server"></p>
+<p>2.<a href="https://cloud.tencent.com/act/campus?cps_key=07262ceff2ebf6a221b67638c3953235">腾讯云学生服务器</a></p>
+<p><img src="https://img.kunkun.eu.org/article/54420/02.png" alt="Tencent Student Server"></p>
+<p>我选择的是轻量应用服务器，对比了一下两家的配置，很明显腾讯的更有<s>性价比</s>的选择 ╮(￣▽￣&quot;&quot;)╭</p>
+<p><strong>PS:一点要选择CentOS系统!!!</strong></p>
+<h3 id="搭建服务器后台">搭建服务器后台</h3>
+<h4 id="安装面板">安装面板</h4>
+<p>我曾经有篇文章是使用宝塔面板来管理服务器，但它显然不是一个专门管理MC服务器的面板</p>
+<p>所以，我的目光转到了<a href="http://mcsm.suwings.top">Mcserver Manager</a>上</p>
+<p><img src="https://img.kunkun.eu.org/article/54420/03.png" alt="Mcserver Manager"></p>
+<p>这个Minecraft服务端管理面板还是很有名的吧，B站教程拿自己的电脑开服，基本都是这个使用面板</p>
+<p>但他们都是使用Windows环境去搭建服务器，CentOS是Linux环境，怎么办好呢 ಠ_ಠ</p>
+<p>查阅一遍Mcserver Manager的使用文档，你可以发现他们已经制作了Linux上的快速安装程序:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -qO- https://gitee.com/Suwingser/MCSManager-installer/raw/master/install.sh | bash</span><br></pre></td></tr></table></figure>
+<p>安装成功后，使用 <code>systemctl start mcsm</code> 命令即可启动面板</p>
+<p>如果安装失败，你还可以查阅官方文档选择其他方法<a href="https://github.com/Suwings/MCSManager/wiki/Linux-%E4%B8%8B%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3">安装</a>，就是有些<s>麻烦</s> (O_o)</p>
+<h4 id="放行端口">放行端口</h4>
+<p>我使用的腾讯云的服务器，操作方式和其他服务器供应商可能不一样，具体操作方式以官方为准</p>
+<p>1.进入防火墙</p>
+<p><img src="https://img.kunkun.eu.org/article/54420/04.png" alt="Firewall"></p>
+<p>2.首先添加规则，在端口填上23333 最后确定</p>
+<p><img src="https://img.kunkun.eu.org/article/54420/05.png" alt="放行端口"></p>
+<p>23333 是Mcserver Manager后台的端口</p>
+<p>除此之外，你还需要按照步骤2添加 25565 端口和 20010-20200 端口</p>
+<p><strong>到此，你就可以通过 公网IP:23333 访问你的服务器后台了</strong></p>
+<p><strong>初次登陆使用 用户名: #master 密码: 123456 登陆MCSM</strong></p>
+<p><strong>PS:及时更改密码!!!</strong></p>
+<h3 id="开启我的世界服务器">开启我的世界服务器</h3>
+<h4 id="安装Java">安装Java</h4>
+<p>你通过SSH连接服务器后 使用 <code>sudo yum install java-1.8.0-openjdk</code> 安装Java</p>
+<p>进入Mcserver Manager</p>
+<p>1.创建新实例应用</p>
+<p><img src="https://img.kunkun.eu.org/article/54420/06.png" alt="Creative New Program"></p>
+<p>2.选择引导创建</p>
+<p><img src="https://img.kunkun.eu.org/article/54420/07.png" alt="Guide Creative"></p>
+<p>实例名称随便填就行</p>
+<p>上传服务端(原版服务端在Wiki上可以找到 Spigot，Bukkit请查阅官网)</p>
+<p>3.设置启动参数</p>
+<p><img src="https://img.kunkun.eu.org/article/54420/08.png" alt="Start Count"></p>
+<p>如果你的服务器运行内存和我一样是2G，建议按图配置</p>
+<p>其他的根据需求配置即可</p>
+<p>4.开启服务器</p>
+<p>进入你刚才创建的实例</p>
+<p><img src="https://img.kunkun.eu.org/article/54420/09.png" alt="Start Server"></p>
+<p>等待它把必要文件生成完整，你的服务器就可以运行了 o(≧v≦)o</p>
+<p><strong>输入 公网IP 就可以进入服务器</strong></p>
+<h3 id="自定义域名">自定义域名</h3>
+<p>设置自己的域名解析服务</p>
+<p>添加一条新记录</p>
+<p>主机记录: mc 记录类型: A 记录值: 公网IP</p>
+<p>意思就是把 mc.你的域名 指向你的服务器</p>
+<p><img src="https://img.kunkun.eu.org/article/54420/10.png" alt="DNS"></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Minecraft</tag>
+        <tag>Server</tag>
+      </tags>
+  </entry>
+</search>
